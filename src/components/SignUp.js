@@ -13,7 +13,8 @@ export const SignUp = (props) => {
      
     const Signup = (e)=>{
         e.preventDefault();
-        auth.createUserWithEmailAndPassword(email,password).then((cred) =>{
+        auth.createUserWithEmailAndPassword(email,password)
+        .then((cred) =>{
             db.collection('SignUp_data').doc(cred.user.uid).set({
                 Name:name,
                 Email:email,
