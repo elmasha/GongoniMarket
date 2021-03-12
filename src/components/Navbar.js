@@ -1,18 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { Icon } from 'react-icons-kit'
+import { cart } from 'react-icons-kit/entypo/cart'
+import {auth} from '../config/Config'
 
-export const Navbar = () => {
+export const Navbar = ({user}) => {
+
+    const hisory = useHistory();
+    const logout = ()=>{
+        auth.signOut().then(()=>{
+            hisory.push('/login')
+        })
+    }
     return (
         <div className="navbox">
             <div className= "leftside">
-                <h3 className="h1">Gongoni</h3><h3 className="h2">Market</h3>
+               <h3>GongoniMarket</h3>
             </div>
 
-            <div  className= "rightside">
-                <Link   to='/signp' className ='navlinks'> Sign Up</Link>
-                <Link  to='/login' className = 'navlinks'> LOG In</Link>
-            </div>
-            
+            {!user && <div className= "rightside">
+                <Link   to='signup' className ='navlinks'> Sign Up</Link>
+                <Link  to='login' className = 'navlinks'> Log In</Link>
+            </div>}
+            {user && <div className='rightside'>
+                <span className="userName"><Link to='/' className='navlinks'>{user}</Link></span>
+                <span><Link to="cartproducts" className='navlink'><Icon icon={cart} /></Link></span>
+                <span><button className='logout-btn' onClick={logout}>LOGOUT</button></span>
+                </div>
+            }
         </div>
     )
 }
