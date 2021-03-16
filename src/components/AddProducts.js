@@ -7,6 +7,7 @@ export const AddProducts = () => {
     const[productName,setProductName,] = useState('');
     const[productPrice,setProductPrice,] = useState(0);
     const[productImg,setProductImg,] = useState(null);
+    const[timestamp,setTimeStamp,]= useState('');
     const[error,setError,] = useState('');
 
     const types = ['image/png','image/jpg','image/jpeg']
@@ -24,6 +25,8 @@ export const AddProducts = () => {
 
     const addProducts = (e) =>{
         e.preventDefault();
+        const today = new Date();
+        setTimeStamp(today);
         console.log(productPrice,productName)
         
 
@@ -72,7 +75,8 @@ var metadata = {
           .set({
               ProduductName:productName,
               ProductPrice: Number(productPrice),
-              ProductImage:downloadURL
+              ProductImage:downloadURL,
+              Timestamp:timestamp
           }).then(()=>{ 
               setProductName('');
               setProductPrice(0);

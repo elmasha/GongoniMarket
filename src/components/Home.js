@@ -5,6 +5,7 @@ import { Products } from './Products'
 import { Header } from './Header'
 import {useHistory} from 'react-router-dom'
 import {auth} from '../config/Config'
+import { Footer } from './Footer'
 
 
 export const Home = ({ user }) => { 
@@ -21,7 +22,8 @@ export const Home = ({ user }) => {
         <div  className="wrapper">
           <Navbar user={user}/>
           <Header/>
-          <Products/>  
+          <Products/>
+          <Footer/>  
         </div>
     )
 }

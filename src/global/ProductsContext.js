@@ -10,10 +10,11 @@ export class ProductsContextProvider extends React.Component{
     state={
         products:[]
     }
-
+    // orderBy( FieldPath, directionStr?: "asc" | "desc"): Query<>;
     componentDidMount(){
         const prevProducts =this.state.products;
-        db.collection('Products').onSnapshot(snapshot =>{
+        db.collection('Products')
+      .onSnapshot(snapshot =>{
             let change = snapshot.docChanges();
             change.forEach(changes =>{ 
                 if(changes.type ==='added'){

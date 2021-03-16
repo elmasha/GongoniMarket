@@ -53,4 +53,20 @@ top: 0;
 .h1{
     color: aqua;
 }
+.footer{
+  padding: 80px;
+  margin-top: 60px;
+  background: #f3f3f3;
+}
 
+
+
+  
+  .footer .copyright-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .footer .credits {
+    font-size: 14px;
+  }

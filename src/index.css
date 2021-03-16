@@ -8,7 +8,8 @@
 html,body{
     width: 100%;
     height: 100vh;
-    font-size: 'Noto Sans JP';    
+    font-size: 'Noto Sans JP'; 
+    color: #555555;   
 }
 
 @media(max-width:700px){
@@ -16,6 +17,17 @@ html,body{
         width: 100%;
     }
 }
+
+
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000000;
+  }
 
 
 /* products */
