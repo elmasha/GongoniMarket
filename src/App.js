@@ -30,10 +30,9 @@ export class App extends Component {
           user :null
         })
       }
+
     })
-
   }
-
 
   render() {
     return (
@@ -45,11 +44,10 @@ export class App extends Component {
           <Route path ='/addproducts' component={AddProducts}/>
           <Route path ='/signup' component={SignUp}/>
           <Route path ='/login' component={Login}/>
-          <Route path = '/cartproducts' component = {()=><Cart user={this.state.user}/>}/>
+          <Route path = '/cartproducts' component= {()=><Cart user={this.state.user}/>}/>
         </Switch>
         </BrowserRouter>
         </CartContextProvider>
-       
       </ProductsContextProvider>
   
     )

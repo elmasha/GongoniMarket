@@ -13,7 +13,8 @@ flex-direction: row;
 justify-content:space-around;
 align-items: center;
 padding: 7px;
-
+position: sticky;
+top: 0;
 
 }
 

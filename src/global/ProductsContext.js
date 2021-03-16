@@ -1,5 +1,6 @@
 import React,{createContext} from 'react';
 import {db} from '../config/Config';
+import {Animated} from "react-animated-css";
 
 
 export const ProductsContext = createContext();
@@ -33,10 +34,9 @@ export class ProductsContextProvider extends React.Component{
 
     render(){
         return(
-            <ProductsContext.Provider value={{products:[...this.state.products]}}>
+             <ProductsContext.Provider value={{products:[...this.state.products]}}>
                 {this.props.children}
             </ProductsContext.Provider>
-
             )
 
     }

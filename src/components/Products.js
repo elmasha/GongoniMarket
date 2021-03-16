@@ -1,6 +1,7 @@
 import React,{useContext} from 'react'
 import { ProductsContext } from '../global/ProductsContext'
 import { CartContext } from '../global/CartContext'
+import {Animated} from "react-animated-css";
 
 export const Products = () => {
     const {products} = useContext(ProductsContext);
