@@ -6,6 +6,8 @@ import { ProductsContextProvider } from './global/ProductsContext';
 import { SignUp } from './components/SignUp';
 import { Login } from './components/Login';
 import {auth,db} from './config/Config';
+import { CartContextProvider } from './global/CartContext';
+import { Cart } from './components/Cart';
    
 export class App extends Component {
 
@@ -36,14 +38,18 @@ export class App extends Component {
   render() {
     return (
       <ProductsContextProvider>
+        <CartContextProvider>
         <BrowserRouter>
         <Switch>
           <Route exact path ='/' component={() => <Home user={this.state.user} />}/>
           <Route path ='/addproducts' component={AddProducts}/>
           <Route path ='/signup' component={SignUp}/>
           <Route path ='/login' component={Login}/>
+          <Route path = '/cartproducts' component = {()=><Cart user={this.state.user}/>}/>
         </Switch>
         </BrowserRouter>
+        </CartContextProvider>
+       
       </ProductsContextProvider>
   
     )

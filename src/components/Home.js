@@ -11,8 +11,8 @@ export const Home = ({ user }) => {
     const history = useHistory();
     useEffect(()=>{
       auth.onAuthStateChanged(user =>{
-        if(!user.uid){
-            history.push('/login')
+        if(!user){
+            history.push('/login');
         } 
       })
     });
