@@ -17,6 +17,13 @@ export const Navbar = ({user}) => {
             <div className= "leftside">
                <h3>GongoniMarket</h3>
             </div>
+            <div className="center">
+                <form className='form-group' autoComplete='off'>
+                    <br/>
+                    <input  name="text" placeholder="Search" className='form-control formSearch' required></input>
+
+                </form>
+            </div>
 
             {!user && <div className= "rightside">
                 <Link   to='signup' className ='navlinks'> Sign Up</Link>

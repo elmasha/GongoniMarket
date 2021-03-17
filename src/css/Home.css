@@ -13,7 +13,8 @@ flex-direction: row;
 justify-content:space-around;
 align-items: center;
 padding: 7px;
-position: sticky;
+background-color: #fff;
+position: fixed;
 top: 0;
 
 }
@@ -33,6 +34,16 @@ top: 0;
     font-size: 12px;
     font-weight: 600;
     position: relative;
+}
+
+.navbox .center {
+    font-size: 12px;
+    font-weight: 600;
+    position: fixed;
+}
+.navbox .center .formSearch{
+  margin-bottom: 40px;
+  width: 500px;
 }
 
 .navbox .rightside span {
