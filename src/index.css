@@ -129,7 +129,22 @@ h3 {
 }
 
 .products-container .product-card .addcart-btn {
-    background-color: aqua;
+    background-color: rgb(0, 255, 255);
+    color: rgb(32, 31, 31);
+    font-size: 15px;
+    font-weight: 400;
+    border: hidden;
+    cursor: pointer;
+    width: 50%;
+    align-self: center;
+    padding: 10px 14px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    outline: none;
+}
+
+.products-container .product-card .addcart-btn:hover {
+    background-color: 1px solid rgb(59, 61, 61);
     color: #fff;
     border: hidden;
     cursor: pointer;
