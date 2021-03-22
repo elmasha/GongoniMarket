@@ -1,11 +1,11 @@
 import React,{createContext} from 'react';
-import {db} from '../config/Config';
+import {db} from '../config/Config'
 import {Animated} from "react-animated-css";
 
 
-export const ProductsContext = createContext();
+export const LatestProductsContext = createContext();
 
-export class ProductsContextProvider extends React.Component{
+export class LatestProductsContextProvider extends React.Component{
 
     state={
         products:[]
@@ -14,8 +14,8 @@ export class ProductsContextProvider extends React.Component{
     componentDidMount(){
         const prevProducts =this.state.products;
         db.collection('Products')
-        // .orderBy("Timestamp", "asc")
-        .limit(30)
+        .orderBy('Timestamp', "asc")
+        .limit(2)
         .onSnapshot(snapshot =>{
             let change = snapshot.docChanges();
             change.forEach(changes =>{ 
@@ -37,9 +37,9 @@ export class ProductsContextProvider extends React.Component{
 
     render(){
         return(
-             <ProductsContext.Provider value={{products:[...this.state.products]}}>
+             <LatestProductsContext.Provider value={{products:[...this.state.products]}}>
                 {this.props.children}
-            </ProductsContext.Provider>
+            </LatestProductsContext.Provider>
             )
 
     }

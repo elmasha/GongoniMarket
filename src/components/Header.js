@@ -39,8 +39,7 @@ export const Header = () => {
     return (
      
         <ParallaxProvider className="custom-class" y={[-20, 20]} tagOuter="figure">
-          {/* <OwlCarousel  className='owl-theme' {...options}> </OwlCarousel>   */}
-           <div class='item'>
+          {/* <OwlCarousel  className='owl-theme' {...options}> </OwlCarousel>   <div class='item'>
                 <h4>1</h4>
             </div>
             <div class='item'>
@@ -51,7 +50,8 @@ export const Header = () => {
             </div>
             <div class='item'>
                 <h4>2</h4>
-            </div> 
+            </div>  */}
+           
             <img src='./photoheader.jpg' alt ='photo' width='100%' />
            
         </ParallaxProvider>

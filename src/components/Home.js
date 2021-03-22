@@ -23,7 +23,7 @@ export const Home = ({ user }) => {
         <div  className="wrapper">
           <Navbar user={user}/>
           <Header/>
-          <LatestProducts/>
+          {/* <LatestProducts/> */}
           <Products/>
           <Footer/>  
         </div>
